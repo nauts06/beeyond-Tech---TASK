@@ -11,7 +11,7 @@ const fetchOrders = async () => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await axios.get('http://localhost:5000/api/partner/orders', {
+    const response = await axios.get('http://13.235.184.207:5000/api/partner/orders', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -34,7 +34,7 @@ const fetchOrders = async () => {
     const token = localStorage.getItem('token');
 
     await axios.put(
-      `http://localhost:5000/api/partner/orders/${orderId}/accept`,
+      `http://13.235.184.207:5000/api/partner/orders/${orderId}/accept`,
       {},
       {
         headers: {
@@ -54,7 +54,7 @@ const fetchOrders = async () => {
     const token = localStorage.getItem('token');
 
     await axios.put(
-      `http://localhost:5000/api/partner/orders/${orderId}/status`,
+      `http://13.235.184.207:5000/api/partner/orders/${orderId}/status`,
       { status: newStatus },
       {
         headers: {

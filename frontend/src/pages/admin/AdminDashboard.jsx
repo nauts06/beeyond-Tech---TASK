@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
  const fetchOrders = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/admin/orders', {
+    const res = await axios.get('http://13.235.184.207:5000/api/admin/orders', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
   const fetchPartners = async () => {
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.get('http://localhost:5000/api/admin/all/partners', {
+    const response = await axios.get('http://13.235.184.207:5000/api/admin/all/partners', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

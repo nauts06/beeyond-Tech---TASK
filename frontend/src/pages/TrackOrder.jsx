@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:5000'); // Update if deployed
+const socket = io('http://13.235.184.207:5000'); // Update if deployed
 
 const TrackOrder = () => {
   const [order, setOrder] = useState(null);
@@ -15,7 +15,7 @@ const TrackOrder = () => {
     socket.emit('joinOrderRoom', orderId);
 
     const fetchOrder = async () => {
-      const res = await fetch(`http://localhost:5000/api/customer/orders/${orderId}`, {
+      const res = await fetch(`http://13.235.184.207:5000/api/customer/orders/${orderId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -14,7 +14,7 @@ const AdminProductForm = () => {
 
  const fetchProducts = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/api/products");
+    const response = await axios.get("http://13.235.184.207:5000/api/products");
     setProducts(response.data?.products || []);
   } catch (err) {
     console.error("Failed to fetch products:", err);
@@ -38,7 +38,7 @@ const AdminProductForm = () => {
     const token = localStorage.getItem("token");
 
     await axios.post(
-      "http://localhost:5000/api/admin/add/products",
+      "http://13.235.184.207:5000/api/admin/add/products",
       formData,
       {
         headers: {

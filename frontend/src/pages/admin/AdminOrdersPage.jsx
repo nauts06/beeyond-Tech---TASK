@@ -13,7 +13,7 @@ const AdminOrdersPage = () => {
   const fetchOrders = async () => {
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.get('http://localhost:5000/api/admin/orders', {
+    const response = await axios.get('http://13.235.184.207:5000/api/admin/orders', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

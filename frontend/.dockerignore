@@ -1,0 +1,21 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build output
+build
+dist
+.next
+
+# Environment files
+.env
+.env.* 
+
+# Git files
+.git
+.gitignore
+
+# OS/editor
+.DS_Store
+.vscode

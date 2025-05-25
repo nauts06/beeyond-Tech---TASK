@@ -9,7 +9,7 @@ const CustomerDashboard = () => {
 
   const fetchProducts = async () => {
   try {
-    const response = await axios.get('http://localhost:5000/api/products');
+    const response = await axios.get('http://13.235.184.207:5000/api/products');
     if (response.data.success) {
       setProducts(response.data.products);
     }
@@ -23,7 +23,7 @@ const CustomerDashboard = () => {
     const token = localStorage.getItem('token');
 
     const response = await axios.post(
-      'http://localhost:5000/api/customer/orders',
+      'http://13.235.184.207:5000/api/customer/orders',
       { productId },
       {
         headers: {

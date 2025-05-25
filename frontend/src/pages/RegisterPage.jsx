@@ -26,7 +26,7 @@ const RegisterPage = () => {
 
   try {
     const response = await axios.post(
-      'http://localhost:5000/api/auth/register',
+      'http://13.235.184.207:5000/api/auth/register',
       form,
       {
         headers: { 'Content-Type': 'application/json' },

@@ -20,7 +20,7 @@ const handleSubmit = async (e) => {
 
   try {
     const res = await axios.post(
-      'http://localhost:5000/api/admin/products',
+      'http://13.235.184.207:5000/api/admin/products',
       formData,
       {
         headers: {

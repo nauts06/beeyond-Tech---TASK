@@ -20,7 +20,7 @@ const handleSubmit = async (e) => {
   setError('');
 
   try {
-    const response = await axios.post('http://localhost:5000/api/auth/login', form, {
+    const response = await axios.post('http://13.235.184.207:5000/api/auth/login', form, {
       headers: { 'Content-Type': 'application/json' },
     });
 

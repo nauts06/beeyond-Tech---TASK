@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { ArrowRight } from 'lucide-react';
 import axios from 'axios';
 
-const socket = io('http://localhost:5000'); // adjust if deployed
+const socket = io('http://13.235.184.207:5000'); // adjust if deployed
 
 const CustomerOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -29,7 +29,7 @@ const CustomerOrders = () => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await axios.get('http://localhost:5000/api/customer/get/orders', {
+    const response = await axios.get('http://13.235.184.207:5000/api/customer/get/orders', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
